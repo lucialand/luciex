@@ -12,14 +12,14 @@ Luciex is a state management library to make state management easy and fun.
 
 ## Installation
 ```
-$ npm install @luciex/core
+$ npm install luciex-core
 # Or with yarn
-$ yarn add @luciex/core
+$ yarn add luciex-core
 ```
 ## Try It Out
 You can create a simple store (or as we call it, an `atom`) for a counter app in only a couple lines.
 ```typescript
-import { Atom } from '@luciex/core';
+import { Atom } from 'luciex-core';
 
 const counterAtom = new Atom(0);
 
