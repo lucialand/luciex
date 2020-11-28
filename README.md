@@ -4,7 +4,7 @@
 
 ## Introduction
 
-Luciex is a state management library to make state management easy and fun.
+Luciex is a simplistic state management library.
 
 - **Simple To Start**
 
