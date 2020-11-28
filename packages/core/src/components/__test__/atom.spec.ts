@@ -9,10 +9,11 @@ describe('Atom', () => {
   });
   it('should subscribe properly', async () => {
     const counter = new Atom(0);
-    const result = await counter.subscribe(async (val: number) => {
-      expect(val).toBe(1);
-    });
+    //@ts-ignore
+    const cb = jest.fn(async (val: number) => {})
+    const result = await counter.subscribe(cb);
     expect(result).toEqual(counter);
-    counter.dispatch((count: number) => count + 1);
+    await counter.dispatch((count: number) => count + 1);
+    expect(cb.mock.calls[0][0]).toBe(1);
   });
 });
