@@ -1,4 +1,4 @@
-import * as Luciex from '../src/index';
+import * as Luciex from '../index';
 
 describe('Luciex', () => {
   it('should export functions', () => {

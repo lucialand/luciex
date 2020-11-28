@@ -1,4 +1,4 @@
-import { Atom } from '../../src/components/atom';
+import { Atom } from '../atom';
 
 describe('Atom', () => {
   it('should allow you to dispatch an action', async () => {
