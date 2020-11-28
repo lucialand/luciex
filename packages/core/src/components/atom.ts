@@ -18,8 +18,8 @@ class Atom<T> {
     return this;
   }
 
-  async dispatch(action: Action<T>) {
-    this.value = await action(this.value);
+  async dispatch(action: Action<T> | T) {
+    this.value = typeof action === "function" ? await (action as Action<T>)(this.value) : action;
     this.subscribers.forEach(async (subscriber) => {
       await subscriber(this.value);
     });

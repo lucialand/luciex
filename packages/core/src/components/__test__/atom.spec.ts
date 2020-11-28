@@ -16,4 +16,10 @@ describe('Atom', () => {
     await counter.dispatch((count: number) => count + 1);
     expect(cb.mock.calls[0][0]).toBe(1);
   });
+  it('should dispatch with a value', async () => {
+    const counter = new Atom(0);
+    expect(await counter.val()).toBe(0);
+    await counter.dispatch(12);
+    expect(await counter.val()).toBe(12);
+  });
 });
