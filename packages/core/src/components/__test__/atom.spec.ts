@@ -10,7 +10,7 @@ describe('Atom', () => {
   it('should subscribe properly', async () => {
     const counter = new Atom(0);
     //@ts-ignore
-    const cb = jest.fn(async (val: number) => {})
+    const cb = jest.fn(async (val: number) => {});
     const result = await counter.subscribe(cb);
     expect(result).toEqual(counter);
     await counter.dispatch((count: number) => count + 1);

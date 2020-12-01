@@ -8,7 +8,7 @@ Luciex is a simplistic state management library.
 
 - **Simple To Start**
 
-> Luciex has a simple chainable interface making it as easy as possible to get right in.
+> Luciex has a simple interface making it as easy as possible to get right in.
 
 ## Installation
 ```
